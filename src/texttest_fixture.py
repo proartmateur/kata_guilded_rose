@@ -19,7 +19,7 @@ if __name__ == "__main__":
              make_item(name="Conjured Mana Cake", sell_in=3, quality=6),  # <-- :O
             ]
 
-    days = 2
+    days = 100
     import sys
     if len(sys.argv) > 1:
         days = int(sys.argv[1]) + 1

@@ -1,7 +1,7 @@
-from src.item.item import Item
+from src.item.item import Item, ItemProps
 
 
-class BackStageItem(Item):
+class BackStageItem(Item, ItemProps):
     """
     Item común y corriente de la tienda
     """
