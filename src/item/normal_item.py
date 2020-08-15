@@ -1,7 +1,7 @@
-from item.item import Item
+from src.item.item import Item
 
 
-class BreeItem(Item):
+class NormalItem(Item):
     """
     Item común y corriente de la tienda
     """
@@ -12,11 +12,20 @@ class BreeItem(Item):
     def __repr__(self):
         return super().__repr__()
 
-    def update(self):
-        self.quality += self._quality_down_speed
+    def update(self) -> None:
+        if self.is_expired():
+            self.quality -= self._quality_down_speed * 2
+        else:
+            self.quality -= self._quality_down_speed
+
         self.constraints()
 
         self.sell_in -= 1
+
+    def is_expired(self) -> bool:
+        if self.sell_in < 0:
+            return True
+        return False
 
     def constraints(self) -> None:
         if self.quality < self._quality_min:

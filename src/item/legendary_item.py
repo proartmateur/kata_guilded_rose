@@ -1,4 +1,4 @@
-from item.item import Item
+from src.item.item import Item
 
 
 class LegendaryItem(Item):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
-from gilded_rose import *
+from src.gilded_rose import *
 
-from item.maker_item import make_item
+from src.item.maker_item import make_item
 
 if __name__ == "__main__":
     print ("OMGHAI!")
@@ -19,7 +19,7 @@ if __name__ == "__main__":
              make_item(name="Conjured Mana Cake", sell_in=3, quality=6),  # <-- :O
             ]
 
-    days = 15
+    days = 2
     import sys
     if len(sys.argv) > 1:
         days = int(sys.argv[1]) + 1

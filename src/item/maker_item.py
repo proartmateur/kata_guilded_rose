@@ -1,9 +1,9 @@
-from item.item import Item
-from item.normal_item import NormalItem
-from item.legendary_item import LegendaryItem
-from item.bree_item import BreeItem
-from item.backstage_item import BackStageItem
-from item.conjured_item import ConjuredItem
+from src.item.item import Item
+from src.item.normal_item import NormalItem
+from src.item.legendary_item import LegendaryItem
+from src.item.bree_item import BreeItem
+from src.item.backstage_item import BackStageItem
+from src.item.conjured_item import ConjuredItem
 
 
 def make_item(name: str, sell_in: int, quality: int) -> Item:
